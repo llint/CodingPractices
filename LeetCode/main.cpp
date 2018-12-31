@@ -8,8 +8,16 @@
 
 #include <iostream>
 
+#include "003_LongestSubstring/LongestSubstring.h"
+#include "133_CloneGraph/CloneGraph.h"
+#include "075_SortColors/SortColors.h"
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
     std::cout << "Hello, World!\n";
+
+    LeetCode_003::Test_LongestSubstring();
+
+    LeetCode_075::Test_SortColors();
+
     return 0;
 }
