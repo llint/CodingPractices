@@ -33,10 +33,11 @@ namespace LeetCode_079
     class Solution {
     public:
         bool exist(const std::vector<std::vector<char>>& board, const std::string& word) {
+            std::unordered_set<std::pair<size_t, size_t>> occurrences{};
             for (size_t y = 0; y < board.size(); ++y) {
                 for (size_t x = 0; x < board[y].size(); ++x) {
                     if (word[0] == board[y][x]) {
-                        if (check(board, {x, y}, {}, word, 0)) {
+                        if (check(board, {x, y}, occurrences, word, 0)) {
                             return true;
                         }
                     }
@@ -45,8 +46,20 @@ namespace LeetCode_079
             return false;
         }
     private:
+        class ScopedErase {
+        public:
+            ScopedErase(std::unordered_set<std::pair<size_t, size_t>>& occurrences, std::unordered_set<std::pair<size_t, size_t>>::iterator it)
+            : occurrences(occurrences), it(it) {
+            }
+            ~ScopedErase() {
+                occurrences.erase(it);
+            }
+        private:
+            std::unordered_set<std::pair<size_t, size_t>>& occurrences;
+            std::unordered_set<std::pair<size_t, size_t>>::iterator it;
+        };
         bool check(const std::vector<std::vector<char>>& board, const std::pair<size_t, size_t>& location,
-                   std::unordered_set<std::pair<size_t, size_t>> occurrences, const std::string& word, size_t charIndex) {
+                   std::unordered_set<std::pair<size_t, size_t>>& occurrences, const std::string& word, size_t charIndex) {
             static const std::pair<size_t, size_t> dirs[] = {{0,-1}, {1,0}, {0,1}, {-1,0}};
 
             auto c1 = board[location.second][location.first];
@@ -57,7 +70,8 @@ namespace LeetCode_079
                 {
                     return true;
                 }
-                occurrences.insert(location); // add center
+                auto r = occurrences.insert(location); // add center
+                ScopedErase se(occurrences, r.first);
                 for (const auto& dir : dirs) {
                     auto newLocation = std::make_pair(location.first + dir.first, location.second + dir.second);
                     if ((ssize_t)newLocation.first >= 0 && (ssize_t)newLocation.second >= 0 &&
