@@ -28,6 +28,7 @@
 		3E16113221D1B36B00CEA01E /* LongestSubstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestSubstring.h; sourceTree = "<group>"; };
 		3E16113421D44C3500CEA01E /* CloneGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloneGraph.h; sourceTree = "<group>"; };
 		3E16113621D8447500CEA01E /* SortColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortColors.h; sourceTree = "<group>"; };
+		3E16113821DEC5FF00CEA01E /* WordSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSearch.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		3E16112921D1B1AB00CEA01E /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
+				3E16113721DEC5C200CEA01E /* 079_WordSearch */,
 				3E16113521D8444B00CEA01E /* 075_SortColors */,
 				3E16113321D44BFE00CEA01E /* 133_CloneGraph */,
 				3E16113121D1B33C00CEA01E /* 003_LongestSubstring */,
@@ -90,6 +92,14 @@
 				3E16113621D8447500CEA01E /* SortColors.h */,
 			);
 			path = 075_SortColors;
+			sourceTree = "<group>";
+		};
+		3E16113721DEC5C200CEA01E /* 079_WordSearch */ = {
+			isa = PBXGroup;
+			children = (
+				3E16113821DEC5FF00CEA01E /* WordSearch.h */,
+			);
+			path = 079_WordSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

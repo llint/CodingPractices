@@ -11,6 +11,7 @@
 #include "003_LongestSubstring/LongestSubstring.h"
 #include "133_CloneGraph/CloneGraph.h"
 #include "075_SortColors/SortColors.h"
+#include "079_WordSearch/WordSearch.h"
 
 int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
@@ -18,6 +19,8 @@ int main(int argc, const char * argv[]) {
     LeetCode_003::Test_LongestSubstring();
 
     LeetCode_075::Test_SortColors();
+
+    LeetCode_079::Test_WorldSearch();
 
     return 0;
 }
