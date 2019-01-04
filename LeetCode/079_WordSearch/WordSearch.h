@@ -65,24 +65,26 @@ namespace LeetCode_079
             auto c1 = board[location.second][location.first];
             auto c2 = word[charIndex];
 
+            bool verified = false;
             if (occurrences.find(location) == occurrences.end() && c1 == c2) {
-                if (charIndex+1 == word.size())
-                {
-                    return true;
-                }
-                auto r = occurrences.insert(location); // add center
-                ScopedErase se(occurrences, r.first);
-                for (const auto& dir : dirs) {
-                    auto newLocation = std::make_pair(location.first + dir.first, location.second + dir.second);
-                    if ((ssize_t)newLocation.first >= 0 && (ssize_t)newLocation.second >= 0 &&
-                        newLocation.second < board.size() && newLocation.first < board[newLocation.second].size()) {
-                        if (check(board, newLocation, occurrences, word, charIndex+1)) {
-                            return true;
+                if (charIndex+1 == word.size()) {
+                    verified = true;
+                } else {
+                    auto r = occurrences.insert(location); // add center
+                    ScopedErase se(occurrences, r.first);
+                    for (const auto& dir : dirs) {
+                        auto newLocation = std::make_pair(location.first + dir.first, location.second + dir.second);
+                        if ((ssize_t)newLocation.first >= 0 && (ssize_t)newLocation.second >= 0 &&
+                            newLocation.second < board.size() && newLocation.first < board[newLocation.second].size()) {
+                            if (check(board, newLocation, occurrences, word, charIndex+1)) {
+                                verified = true;
+                                break;
+                            }
                         }
                     }
                 }
             }
-            return false;
+            return verified;
         }
     };
 
