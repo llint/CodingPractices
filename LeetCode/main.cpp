@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
 
     LeetCode_075::Test_SortColors();
 
-    LeetCode_079::Test_WorldSearch();
+    LeetCode_079::Test_WordSearch();
 
     return 0;
 }

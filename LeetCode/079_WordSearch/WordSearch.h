@@ -72,7 +72,7 @@ namespace LeetCode_079
         }
     };
 
-    void Test_WorldSearch()
+    void Test_WordSearch()
     {
         Solution solution;
 
