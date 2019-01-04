@@ -24,7 +24,7 @@ namespace LeetCode_079
             for (size_t y = 0; y < board.size(); ++y) {
                 for (size_t x = 0; x < board[y].size(); ++x) {
                     if (word[0] == board[y][x]) {
-                        if (check(board, x, y, word, 0)) {
+                        if (check(board, y, x, word, 0)) {
                             return true;
                         }
                     }
@@ -34,8 +34,8 @@ namespace LeetCode_079
         }
     private:
         static constexpr const char NONE = '\0';
-        bool check(std::vector<std::vector<char>>& board, size_t x, size_t y, const std::string& word, size_t charIndex) {
-            static const std::tuple<size_t, size_t> dirs[] = {{0,-1}, {1,0}, {0,1}, {-1,0}};
+        bool check(std::vector<std::vector<char>>& board, size_t y, size_t x, const std::string& word, size_t charIndex) {
+            static const std::tuple<size_t, size_t> dirs[] = {{-1,0}, {0,1}, {1,0}, {0,-1}}; // {dy,dx}
 
             auto c1 = board[y][x];
             auto c2 = word[charIndex];
@@ -46,11 +46,11 @@ namespace LeetCode_079
                     verified = true;
                 } else {
                     board[y][x] = NONE;
-                    for (const auto& [dx, dy] : dirs) {
-                        auto [x2, y2] = std::make_tuple(x + dx, y + dy);
+                    for (const auto& [dy, dx] : dirs) {
+                        auto [y2, x2] = std::make_tuple(y + dy, x + dx);
                         if ((ssize_t)y2 >= 0 && (ssize_t)x2 >= 0 && 
                             y2 < board.size() && x2 < board[y2].size()) {
-                            if (check(board, x2, y2, word, charIndex+1)) {
+                            if (check(board, y2, x2, word, charIndex+1)) {
                                 verified = true;
                                 break;
                             }
