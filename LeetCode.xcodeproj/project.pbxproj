@@ -29,6 +29,8 @@
 		3E16113421D44C3500CEA01E /* CloneGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloneGraph.h; sourceTree = "<group>"; };
 		3E16113621D8447500CEA01E /* SortColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortColors.h; sourceTree = "<group>"; };
 		3E16113821DEC5FF00CEA01E /* WordSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordSearch.h; sourceTree = "<group>"; };
+		3E16113A21E0208300CEA01E /* MergeInterval.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeInterval.h; sourceTree = "<group>"; };
+		3E16113C21E1CD0C00CEA01E /* AddParentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddParentheses.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,8 @@
 		3E16112921D1B1AB00CEA01E /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
+				3E16113B21E1CCD800CEA01E /* 921_AddParantheses */,
+				3E16113921E0205800CEA01E /* 056_MergeInterval */,
 				3E16113721DEC5C200CEA01E /* 079_WordSearch */,
 				3E16113521D8444B00CEA01E /* 075_SortColors */,
 				3E16113321D44BFE00CEA01E /* 133_CloneGraph */,
@@ -100,6 +104,22 @@
 				3E16113821DEC5FF00CEA01E /* WordSearch.h */,
 			);
 			path = 079_WordSearch;
+			sourceTree = "<group>";
+		};
+		3E16113921E0205800CEA01E /* 056_MergeInterval */ = {
+			isa = PBXGroup;
+			children = (
+				3E16113A21E0208300CEA01E /* MergeInterval.h */,
+			);
+			path = 056_MergeInterval;
+			sourceTree = "<group>";
+		};
+		3E16113B21E1CCD800CEA01E /* 921_AddParantheses */ = {
+			isa = PBXGroup;
+			children = (
+				3E16113C21E1CD0C00CEA01E /* AddParentheses.h */,
+			);
+			path = 921_AddParantheses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
