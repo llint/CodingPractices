@@ -14,6 +14,7 @@
 #include "079_WordSearch/WordSearch.h"
 #include "056_MergeInterval/MergeInterval.h"
 #include "921_AddParantheses/AddParentheses.h"
+#include "287_FindDuplicate/FindDuplicate.h"
 
 int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
