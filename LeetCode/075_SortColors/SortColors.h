@@ -46,10 +46,10 @@ namespace LeetCode_075
             size_t i = idx_0;
             while ((ssize_t)(i - idx_2) <= 0) {
                 if (nums[i] == 0) {
-                    nums[i++] = nums[idx_0]; // NB: this cannot be 2, since any 2 before this index would have been swapped to the end
+                    nums[i++] = nums[idx_0]; // NB: this cannot be 2 (could be 0 or 1), since any 2 before this index would have been swapped to the end
                     nums[idx_0++] = 0;
                 } else if (nums[i] == 2) {
-                    nums[i] = nums[idx_2]; // could be 0 or 1 - note that since we need to check the newly swapped value in this index again, i is not incremented
+                    nums[i] = nums[idx_2]; // could be 0 or 1 or 2 - note that since we need to check the newly swapped value in this index again, i is not incremented
                     nums[idx_2--] = 2;
                 } else if (nums[i] == 1) {
                     ++i;

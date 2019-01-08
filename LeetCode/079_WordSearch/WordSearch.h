@@ -22,11 +22,11 @@ namespace LeetCode_079
      Algorithm: this is essentially DFS
      1. look for the first character in the input word in the board in a linear fashion
      2. once the first character is located in the board, from this location conduct the recursive DFS process
-     3. the recursive DFS process takes the folloing inputs:
+     3. the recursive DFS process takes the following inputs:
         - the board itself
         - the pivot location
         - the word string (immutable)
-        - the current index into the world to check
+        - the current index into the word to check
      4. if the character at the pivot location is the same as the current character to check in the input word,
         mark the pivot position as visited
      5. for the 4 directions around the pivot position, conduct the same DFS process on each branch, and if any
