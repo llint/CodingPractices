@@ -50,8 +50,8 @@ namespace LeetCode_392
         }
 
         /*
-         Algorithm: this is a little brutal force - find the first character from s in t
-         from this index for t and 0 for s, for each character in t from this index x, check if there is a match for the current s at index y
+         Algorithm: this is a little brutal force - find the first character of s in t
+         from this index of t and 0 for s, for each character in t from this index x, check if there is a match for the current s at index y
          if yes, increment y (while x is always incrementing) until either string is consumed
          the tricky part is: once this one pass is finished, if a subsequence is found, all good, and we are done; while we are also done if no
          subsequence is found - there is no need to check the next starting position and repeat the process - (XXX - always return)
