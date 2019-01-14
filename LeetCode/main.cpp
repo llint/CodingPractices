@@ -17,6 +17,7 @@
 #include "287_FindDuplicate/FindDuplicate.h"
 #include "392_IsSubsequence/IsSubsequence.h"
 #include "x01_PathExists/PathExists.h"
+#include "x02_MaxPointsInRange/MaxPointsInRange.h"
 
 int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
@@ -30,6 +31,8 @@ int main(int argc, const char * argv[]) {
     LeetCode_392::Test_IsSubsequence();
 
     LeetCode_x01::Test_PathExists();
+
+    CruiseOnsite::Test_MaxPointsInRange_O_n();
 
     return 0;
 }

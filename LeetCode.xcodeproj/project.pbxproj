@@ -34,6 +34,7 @@
 		3E16113E21E2A22B00CEA01E /* FindDuplicate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindDuplicate.h; sourceTree = "<group>"; };
 		3E16114021E2E08000CEA01E /* IsSubsequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IsSubsequence.h; sourceTree = "<group>"; };
 		3E16114221E5AEA000CEA01E /* PathExists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathExists.h; sourceTree = "<group>"; };
+		3E16114421EA775200CEA01E /* MaxPointsInRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxPointsInRange.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		3E16112921D1B1AB00CEA01E /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
+				3E16114321EA771500CEA01E /* x02_MaxPointsInRange */,
 				3E16114121E5ADB700CEA01E /* x01_PathExists */,
 				3E16113F21E2E05E00CEA01E /* 392_IsSubsequence */,
 				3E16113D21E2A1F700CEA01E /* 287_FindDuplicate */,
@@ -150,6 +152,14 @@
 				3E16114221E5AEA000CEA01E /* PathExists.h */,
 			);
 			path = x01_PathExists;
+			sourceTree = "<group>";
+		};
+		3E16114321EA771500CEA01E /* x02_MaxPointsInRange */ = {
+			isa = PBXGroup;
+			children = (
+				3E16114421EA775200CEA01E /* MaxPointsInRange.h */,
+			);
+			path = x02_MaxPointsInRange;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
