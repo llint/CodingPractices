@@ -19,6 +19,7 @@
 #include "x01_PathExists/PathExists.h"
 #include "x02_MaxPointsInRange/MaxPointsInRange.h"
 #include "001_TwoSum/TwoSum.h"
+#include "002_AddTwoNumbers/AddTwoNumbers.h"
 
 int main(int argc, const char * argv[]) {
     std::cout << "Hello, World!\n";
