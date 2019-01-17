@@ -30,7 +30,7 @@ namespace CruiseOnsite
 
      A better algorithm is: once the start window index moves to the next number, the numbers that were in the previous window must still in the new window range, EXCEPT
      the first number of the old window is now skipped! we don't have to recheck those numbers against the new window start - even though the differences would
-     be different from the old window, but those numbers are still in the number (EXCEPT the first number of the old window!) - so we don't have to perform
+     be different from the old window, but those numbers are still in the range (EXCEPT the first number of the old window!) - so we don't have to perform
      the re-calculations!
 
      What is needed for the new window is only to start from the index past the last number of the old window, and check as many as the new numbers that are
